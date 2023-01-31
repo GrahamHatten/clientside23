@@ -15,7 +15,7 @@
             const checkForAt = email.indexOf("@");
                 
             (name && email && phone)
-                        ? pass
+                        ? window.alert("Thank You!)
                         : window.alert("Please fill in all fields");
 
             if(checkForAt !== -1){
