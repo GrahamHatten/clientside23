@@ -14,9 +14,9 @@
   function squaredNumber(number){
         return number * number;
   }
-  document.getElementById("number").onchange = function() {
+  document.getElementById("squareRoot").onchange = function() {
         var sRoot = document.getElementById("squareRoot").value;
-        document.getElementById("squareRoot").value = squareRoot(sRoot);
+        document.getElementById("number").value = squareRoot(sRoot);
       }
   document.getElementById("number").onchange = function() {
         var nSquare = document.getElementById("number").value;
