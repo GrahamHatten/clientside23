@@ -1,0 +1,19 @@
+form {
+  margin: 20px;
+    }
+label {
+  display: block;
+  margin-bottom: 10px;
+    }
+input [type="number"] {
+  width: 50px;
+  margin-left: 10px;
+    }
+button {
+  display: block;
+  margin-top: 10px;
+    }
+#result {
+  margin: 20px;
+  font-size: 24px;
+    }
