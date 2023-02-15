@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Scores</title>
+  <style>
+    form {
+      margin: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input [type="number"] {
+      width: 50px;
+      margin-left: 10px;
+    }
+    button {
+      display: block;
+      margin-top: 10px;
+    }
+    #result {
+      margin: 20px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <form id="scoreForm">
+    <h1>Case Project 3</h1>
+    <label>Test 1: <input type="number" id="score1" min="0" max="100" required></label>
+    <label>Test 2: <input type="number" id="score2" min="0" max="100" required></label>
+    <label>Test 3: <input type="number" id="score3" min="0" max="100" required></label>
+    <label>Test 4: <input type="number" id="score4" min="0" max="100" required></label>
+    <label>Test 5: <input type="number" id="score5" min="0" max="100" required></label>
+    <button type="submit">Calculate</button>
+  </form>
+  <div id="result"></div>
+  <script>
+    const scoreForm = document.getElementById('scoreForm');
+    const resultDiv = document.getElementById('result');
+
+    scoreForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const score1 = parseFloat(document.getElementById('score1').value);
+      const score2 = parseFloat(document.getElementById('score2').value);
+      const score3 = parseFloat(document.getElementById('score3').value);
+      const score4 = parseFloat(document.getElementById('score4').value);
+      const score5 = parseFloat(document.getElementById('score5').value);
+      const average = (score1 + score2 + score3 + score4 + score5) / 5;
+      let letterGrade;
+      if (average >= 90) {
+        letterGrade = "A";
+      } else if (average >= 80) {
+        letterGrade = "B";
+      } else if (average >= 70) {
+        letterGrade = "C";
+      } else if (average >= 65) {
+        letterGrade = "D";
+      } else {
+        letterGrade = "F";
+      }
+      resultDiv.textContent = `Your average score is ${average.toFixed(2)} (${letterGrade})`;
+    });
+  </script>
+</body>
+</html>
