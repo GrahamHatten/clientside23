@@ -1,7 +1,18 @@
 /* Reset default margin and padding for body */
+/* Reset default margin and padding for body */
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Center content on the page */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
 }
 
 /* Style for chapters and links */
@@ -16,4 +27,29 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Additional styles for chapters */
+p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Additional styles for links */
+a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Style for chapter links container */
+.chapter-links {
+    margin-top: 20px;
 }
